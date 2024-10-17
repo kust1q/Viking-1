@@ -17,6 +17,6 @@
 Симуляция: Kerbal Space Programm
 
 # Ссылки
-1. [План проекта]()
+1. [План проекта](https://docs.google.com/document/d/1TRsWEuXkcrEdjo9ki8rPN9XOeBeQ2YD5eTJG59g8iw8/edit?usp=sharing)
 2. [Отчёт]()
 3. [Демонстрация полёта]()
