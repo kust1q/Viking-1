@@ -1,0 +1,5 @@
+KERBIN_RADIUS = 600000
+KERBIN_POSITION = (0, -KERBIN_RADIUS)
+mu = 3.5316 * 10**12  # G * M Кербина
+g = 9.81
+target_apoapsis = 100_000 + KERBIN_RADIUS

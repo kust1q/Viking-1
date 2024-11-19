@@ -1,10 +1,10 @@
 class Rocket:
 
-    def __init__(self):
-        self.curr_mass = 0
+    def __init__(self, angle_func):
+        self.curr_mass = 0  # текущая масса
         self.position = (0, 0)
         self.velocity = (0, 0)
-        self.stages = []
+        self.stages = []  # массив с ступенями(движками)
         self.angle_func = angle_func
 
     def add_stage(self, stage):
@@ -49,17 +49,17 @@ class Stage:
         fuel_consump,
         full_fuel,
     ):
-        self.vac_thrust = vac_thrust
-        self.ground_thrust = ground_thrust
-        self.start_mass = start_mass
-        self.end_mass = end_mass
+        self.vac_thrust = vac_thrust  # тяга в вакууме
+        self.ground_thrust = ground_thrust  # тяга у земли
+        self.start_mass = start_mass  # начальная масса
+        self.end_mass = end_mass  # конечная масса
         self.resis_coef = (
             resis_coef  # массив [(масса детали в тоннах, кэф сопротивления), ...]
         )
-        self.fuel_consump = fuel_consump
-        self.full_fuel = full_fuel
-        self.curr_mass = self.start_mass
-        self.delta_thrust = self.ground_thrust - self.vac_thrust
+        self.fuel_consump = fuel_consump  # расход топлива
+        self.full_fuel = full_fuel  # максимальное количество топлива
+        self.curr_mass = self.start_mass  # текущая масса
+        self.delta_thrust = self.ground_thrust - self.vac_thrust  # разность тяг
         self.max_time_moving = full_fuel / fuel_consump
         self.max_distance = (self.end_mass - self.start_mass) / self.max_time_moving
 
