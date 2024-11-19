@@ -4,7 +4,7 @@ import Create_Rocket
 import Physics
 
 
-def KerbinOrbitFlightSimulation(rocket=Create_Rocket.Rocket()):
+def KerbinOrbitFlightSimulation(rocket: Create_Rocket.Rocket):
     position = rocket.position
     velocity = rocket.velocity
     mass = rocket.last_curr_mass()
@@ -74,7 +74,7 @@ def DrawKerbinOrbit():
 
 
 def FlightModel(
-    rocket=Create_Rocket.Rocket(), stage=Create_Rocket.Stage(), stage_live_time=float()
+    rocket: Create_Rocket.Rocket, stage: Create_Rocket.Stage, stage_live_time: float
 ):
     X_c, Y_c = Constants.KERBIN_POSITION
     mu = Constants.mu
