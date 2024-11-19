@@ -69,7 +69,7 @@ class Stage:
             self.ground_thrust,
         )
 
-    def curr_mass(self, time):
+    def get_curr_mass(self, time):
         self.curr_mass = max(
             min(self.start_mass + self.max_distance * time, self.start_mass),
             self.end_mass,

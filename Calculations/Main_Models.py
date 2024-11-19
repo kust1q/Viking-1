@@ -49,7 +49,7 @@ def KerbinOrbitFlightSimulation(rocket: Create_Rocket.Rocket):
 
         X.append(position[0])
         Y.append(position[1])
-        t += delta_time
+        time += delta_time
 
         return (X, Y), (Ap, state_ap), (Pr, state_pr)
 
@@ -96,7 +96,7 @@ def FlightModel(
         angle = rocket.angle(height)
         pressure = Physics.Pressure(height)
         thrust = stage.curr_thrust(pressure)
-        mass = stage.curr_mass(time)
+        mass = stage.get_curr_mass(time)
         resis = Physics.Resistance(
             Physics.Density(pressure), curr_velocity, rocket.curr_resis_coef(), mass
         )
@@ -113,9 +113,9 @@ def FlightModel(
             rocket.velocity[0] + a[0] * delta_time,
             rocket.velocity[1] + a[1] * delta_time,
         ]
-        position = [
-            position[0] + rocket.velocity[0] * delta_time,
-            position[1] + rocket.velocity[1] * delta_time,
+        rocket.position = [
+            rocket.position[0] + rocket.velocity[0] * delta_time,
+            rocket.position[1] + rocket.velocity[1] * delta_time,
         ]
 
         h_square = (rad_vec[0] * velocity_vec[1] - rad_vec[1] * velocity_vec[0]) ** 2
