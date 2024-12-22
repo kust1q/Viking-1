@@ -14,6 +14,13 @@
 Программирование: Язык программирования Python, библиотека rKSP, библиотека Time, библиотека Matplotlib, библиотека Scipy, библиотека Math, библиотека NumPy, библиотека Json
 
 Симуляция: Kerbal Space Programm
+Моды для KSP:
+kRPC: Remote Procedure Call Server
+MechJeb 2
+KSP Burst
+KRPC MechJeb
+Module Manager
+TriggerAu Flags
 
 # Ссылки
 1. [План проекта](https://docs.google.com/document/d/1TRsWEuXkcrEdjo9ki8rPN9XOeBeQ2YD5eTJG59g8iw8/edit?usp=sharing)
